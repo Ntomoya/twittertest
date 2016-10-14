@@ -1,0 +1,7 @@
+.col-xs-8#users-content
+  = render partial: "users/header"
+  .list-group
+    - if @user.followers.empty?
+      .list-group-item
+        まだフォロワーはいません
+    = render partial: "users/user", collection: @user.followers

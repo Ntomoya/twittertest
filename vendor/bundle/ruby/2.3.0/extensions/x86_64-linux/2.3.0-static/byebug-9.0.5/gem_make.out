@@ -1,0 +1,19 @@
+current directory: /home/nnks/rails/twittertest/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+/home/nnks/.anyenv/envs/rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160917-2151-1quf48e.rb extconf.rb
+creating Makefile
+
+current directory: /home/nnks/rails/twittertest/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/nnks/rails/twittertest/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR="
+compiling threads.c
+compiling byebug.c
+compiling breakpoint.c
+compiling locker.c
+compiling context.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/nnks/rails/twittertest/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20160917-2151-up28xl/byebug

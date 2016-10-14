@@ -1,0 +1,31 @@
+#registrations-new
+  .col-xs-6.left-content
+    %h1 #Tsubuyaki
+    %p.ex
+      にゃんぱす
+    %p.by
+      開発者: hoge デザイン: piyo 企画: foo
+    - if notice
+      %p
+        .alert.alert-info= notice
+  .col-xs-6.right-content
+    = form_for @user, url: registrations_path, method: :post do |f|
+      %h2
+        会員登録する
+      - @user.errors.each do |attr, message|
+        .alert.alert-danger= message
+      .form-group
+        = f.label :name, "ユーザーID: @test", class: "control-label"
+        = f.text_field :name, class: "form-control"
+      .form-group
+        = f.label :emaili, "メールアドレス: hello@example.com", class: "control-label"
+        = f.text_field :email, class: "form-control"
+      .form-group
+        = f.label :password, "パスワード: 6文字以上", class: "control-label"
+        = f.password_field :password, class: "form-control"
+      .form-group
+        = f.label :password_confirmation, "確認用パスワード: 6文字以上", class: "control-label"
+        = f.password_field :password_confirmation, class: "form-control"
+      = f.submit "登録する", class: "btn btn-primary"
+      = link_to "ログインする", new_sessions_path, class: "login pull-right"
+      .clear

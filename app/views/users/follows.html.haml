@@ -1,0 +1,7 @@
+.col-xs-8#users-content
+  = render partial: "users/header"
+  .list-group
+    - if @user.inverse_followers.empty?
+      .list-group-item
+        まだフォローはしていません
+    = render partial: "users/user", collection: @user.inverse_followers
